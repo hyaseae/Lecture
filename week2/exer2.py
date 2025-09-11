@@ -1,5 +1,6 @@
 """using copilot for making a big structure."""
 
+
 class Temperature:
     """A class that represents a tremperature."""
     unit = "Celsius"
@@ -11,7 +12,7 @@ class Temperature:
 
     def display(self):
         """print a temperature."""
-        print(str(self.value) +" " + self.unit)
+        print(str(self.value) + " " + self.unit)
         
     @classmethod
     def change_unit(cls, new_unit):
@@ -21,10 +22,10 @@ class Temperature:
     @staticmethod
     def to_fahrenheit(temperature):
         """convert celsius to fahrenheit."""
-        #maybe can reuse code from CS101?
-        #fahren = (celsius * 9 / 5) + 32 <copied from lab3 XD
+        # maybe can reuse code from CS101?
+        # fahren = (celsius * 9 / 5) + 32 <copied from CS 101's lab2 XD
         return (temperature * 9 / 5) + 32
-
+    
 
 t1 = Temperature(100)
 
@@ -39,4 +40,5 @@ Temperature.unit = "Kelvin"
 t1.display()
 t2.display()
 
-# D. cause, it is an class method.
+# D. because, it is an class method. so it change the class variable unit, and since it is class variable, any other
+# class function looking at unit will be affected.

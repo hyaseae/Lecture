@@ -1,0 +1,41 @@
+"""using copilot for making a big structure."""
+
+class Temperature:
+    """A class that represents a tremperature."""
+    unit = "Celsius"
+    
+    def __init__(self, value):
+        """initailizng a value."""
+        # I... just started to believe that theere is type issues from now and on.
+        self.value = value
+
+    def display(self):
+        """print a temperature."""
+        print(str(self.value) +" " + self.unit)
+        
+    @classmethod
+    def change_unit(cls, new_unit):
+        """changing the unit of temperature."""
+        cls.unit = new_unit
+    @staticmethod
+    def to_fahrenheit():
+        """convert celsius to fahrenheit."""
+        #maybe can reuse code from CS101?
+        #fahren = (celsius * 9 / 5) + 32 <copied from lab3 XD
+        
+
+
+t1 = Temperature(100)
+
+f_100 = Temperature.to_fahrenheit(100)
+
+print(f_100)
+
+t2 = Temperature(25)
+
+Temperature.unit = "Kelvin"
+
+t1.display()
+t2.display()
+
+# D. cause, it is an class method.

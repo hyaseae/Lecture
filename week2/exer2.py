@@ -17,12 +17,13 @@ class Temperature:
     def change_unit(cls, new_unit):
         """changing the unit of temperature."""
         cls.unit = new_unit
+    
     @staticmethod
-    def to_fahrenheit():
+    def to_fahrenheit(temperature):
         """convert celsius to fahrenheit."""
         #maybe can reuse code from CS101?
         #fahren = (celsius * 9 / 5) + 32 <copied from lab3 XD
-        
+        return (temperature * 9 / 5) + 32
 
 
 t1 = Temperature(100)

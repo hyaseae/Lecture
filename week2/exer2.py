@@ -35,7 +35,7 @@ print(f_100)
 
 t2 = Temperature(25)
 
-Temperature.unit = "Kelvin"
+Temperature.change_unit("kelvin")
 
 t1.display()
 t2.display()

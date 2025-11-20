@@ -1,13 +1,6 @@
-# Temperature conversion program Fahrenheit->Celsius
+import os
+from langchain_openai import ChatOpenAI
 
-# program greeting:
-print('This program will convert degrees Fahrenheit to degrees Celsius')
+assert os.environ.get("OPENAI_API_KEY") is not None
 
-# get temperature in Celsius:
-celsius = float(input('Enter degrees Celsius: '))
-# convert Celsius to Fahrenheit:
-fahren = (celsius * 9 / 5) + 32
-
-# print result:
-print(celsius, 'degrees Celsius equals',
-      format(fahren, '.1f'), 'degrees Fahrenheit')
+print(ChatOpenAI(model="gpt-4.1").invoke("Convert the given Celsius temperature to Fahrenheit: "+input("Enter degrees Celsius: ")))
